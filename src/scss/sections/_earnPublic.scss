@@ -1,0 +1,116 @@
+@use "../functions" as *;
+
+.section--learn-first {
+  max-width: 1181px;
+  margin: 32px auto 0;
+
+  @media (max-width: 768px) {
+    margin: 40px auto;
+    display: none;
+  }
+
+  .section__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+    color: #576b78;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 0;
+      font-size: 28px;
+    }
+  }
+
+  .section__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    > img {
+      height: 169px;
+      width: auto;
+
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
+    }
+  }
+
+  .section__content {
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto 18rem;
+    gap: 16px;
+    align-items: center;
+    color: #2f4858;
+    padding: 55px 0 41px 57px;
+    position: relative;
+    isolation: isolate;
+
+    @media (max-width: 768px) {
+      padding: 24px 0 24px 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content auto;
+      gap: 0;
+
+      img {
+        order: -1;
+        justify-self: center;
+        @media screen and (max-width: 768px) {
+          width: 300px;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 8px;
+      inset: 0 8vw 0 0;
+      background-color: #ffffff;
+      z-index: -1;
+
+      @media (min-width: 499px) and (max-width: 768px) {
+        inset: 15vw 0 0 0;
+      }
+
+      @media (max-width: 499px) {
+        inset: 25vw 0 0 0;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        margin-top: 24px;
+        padding-right: 16px;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 1em;
+
+        + li {
+          margin-top: 0.875rem;
+        }
+
+        > img {
+          flex: 0 0 1.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          transform: translateY(0.1em);
+        }
+      }
+    }
+  }
+}

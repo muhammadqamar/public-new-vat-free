@@ -1,0 +1,139 @@
+.phone_and_visiting_section {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+
+  @media (max-width: 768px) {
+    margin: 0 auto 48px;
+  }
+
+  .phone_box {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 999px) {
+      flex-direction: column;
+    }
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+    &:last-child {
+      @media (max-width: 999px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .phone_img {
+      width: 654px;
+      height: 427px;
+      object-fit: fill;
+
+      @media (max-width: 999px) {
+        display: none;
+      }
+      @media (min-width: 999px) and (max-width: 1124px) {
+        width: 525px;
+      }
+    }
+
+    .phone_img_mobile {
+      width: 100%;
+      height: auto;
+      @media (min-width: 999px) {
+        display: none;
+      }
+    }
+
+    .visiting_img {
+      width: 532px;
+      height: 314px;
+
+      @media (max-width: 999px) {
+        display: none;
+      }
+      @media (min-width: 999px) and (max-width: 1124px) {
+        width: 350px;
+      }
+    }
+
+    .visiting_img_mobile {
+      width: 100%;
+      height: auto;
+      @media (min-width: 999px) {
+        display: none;
+      }
+    }
+
+    .phone_content.one_about {
+      min-height: 427px;
+      @media (max-width: 999px) {
+        min-height: auto;
+      }
+    }
+    .phone_content {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 0px 6px 0px 0px;
+
+      .phone_heading {
+        display: flex;
+        align-items: center;
+        gap: 15.53px;
+        padding: 38px 56px 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 768px) {
+          padding: 26px 24px;
+        }
+
+        .true_img {
+          width: 28.47px;
+          height: 35px;
+        }
+
+        .phone_text {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 50px;
+          letter-spacing: 0.01em;
+          color: #2f4858;
+          margin: 0;
+
+          @media (max-width: 768px) {
+            font-size: 20px;
+            line-height: 25px;
+          }
+        }
+      }
+
+      .phone_about {
+        padding: 32px 56px 96px;
+
+        @media (max-width: 999px) {
+          padding: 20px 24px 32px;
+        }
+        .main_text {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 37px;
+          letter-spacing: 0.02em;
+          color: #2f4858;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+            line-height: 29px;
+          }
+
+          & span {
+            color: #f15a22;
+            font-weight: 700;
+          }
+
+          .s-1 {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+}
